@@ -46,6 +46,7 @@ void insert_range(set<pair<int, int>> &setOfRange, pair<int, int> data) {
                 break;
             } else if (al <= a) {
                 a = al;
+                b = max(b,bl);
                 // cout << "left_erased: <" << (*it).first << ", " << (*it).second << ">" << endl;
                 setOfRange.erase(it_l); // บรรทัดนี้ถ้าสลับกับบรรทัดล่างจะ segmentation fault
                 it = setOfRange.erase(it);
@@ -63,6 +64,7 @@ void insert_range(set<pair<int, int>> &setOfRange, pair<int, int> data) {
 }
 
 int main() {
+    ios_base::sync_with_stdio(false);cin.tie(NULL);
     int n;
 
     cin >> n;
@@ -78,7 +80,7 @@ int main() {
             b += 1;
             insert_range(s, make_pair(a,b));
         } else if (op == 2) {
-            cout << s.size() << endl;
+            cout << s.size() << "\n";
             // for (auto &p : s) {
             //     cout << "<" << p.first << ", " << p.second << ">" << endl;
             // }
