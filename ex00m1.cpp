@@ -5,14 +5,14 @@
 
 using namespace std;
 
-bool cmp = [] (const pair<int, int> &a, const pair<int, int> &b) {
-    return (b.first < a.second || (a.first == b.first && b.second < a.second));
+auto cmp = [] (const pair<int, int> &a, const pair<int, int> &b) {
+    return (b.first < a.first || (a.first == b.first && b.second < a.second));
 };
 
 int main() {
     int n, m;
     cin >> n >> m;
-    priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(cmp)> chefs;
+    priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(cmp)> chefs(cmp);
 
     bool finished = false;
 
