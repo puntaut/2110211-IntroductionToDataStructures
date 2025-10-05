@@ -10,7 +10,7 @@ int main() {
 
     int n, m, start;
     cin >> n >> m >> start;
-    vector<int> day2money(100000);
+    vector<int> day2money(100001);
 
     day2money[0] = start;
 
@@ -20,9 +20,9 @@ int main() {
         day2money[a] = s;
     }
 
-    int add = start;
+    int add;
     int money = 0;
-    for (int i = 0; i < 100000; i++) {
+    for (int i = 0; i < 100001; i++) {
         if (day2money[i] != 0) add = day2money[i];
         money += add;
         day2money[i] = money;

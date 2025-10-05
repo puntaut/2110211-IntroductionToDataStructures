@@ -43,7 +43,7 @@ void print_mSize (int mFront, int mSize, int mCap, int last, string &s) {
         } else if (mFront < last) {
             s += "WRONG " + to_string(last - mFront) + "\n";
         } else {
-            s += "wRONG " + to_string(last + mCap - mFront) + "\n";
+            s += "WRONG " + to_string(last + mCap - mFront) + "\n";
         }
     }
 }
@@ -85,6 +85,7 @@ int main() {
     cin >> n;
 
     string s;
+
     while (n--) {
         int mFront, mSize, mCap, last, correction;
 
