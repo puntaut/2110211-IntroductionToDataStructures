@@ -1,6 +1,6 @@
 #include <iostream>
-#include <map>
 #include <set>
+#include <vector>
 
 using namespace std;
 
@@ -53,5 +53,6 @@ int main() {
             layer_count -= 1;
         }
     }
+    cout << top_record << endl;
     if (layer_count != 0) cout << "WTF" << endl;
 }

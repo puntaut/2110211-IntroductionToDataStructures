@@ -1,0 +1,45 @@
+# -----------------------
+# C++ build artifacts
+# -----------------------
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.dylib
+*.so
+*.so.*
+
+# Executables
+*.exe
+*.out
+# Extensionless executables (common on macOS/Linux)
+# Matches files without a dot in the name (but not directories)
+*[!.]*/
+
+# -----------------------
+# Debug / build files
+# -----------------------
+*.dSYM/
+*.stackdump
+*.log
+
+# Build directories (CMake, Make, etc.)
+build/
+cmake-build-*/
+
+# -----------------------
+# VS Code
+# -----------------------
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# -----------------------
+# macOS system files
+# -----------------------
+.DS_Store
+
